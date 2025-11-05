@@ -5,7 +5,12 @@ import App from "./App";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
-  <BrowserRouter>
-    <App />
-  </BrowserRouter>
+<React.StrictMode>
+    <BrowserRouter basename={process.env.PUBLIC_URL}>
+    <Routes>
+    <Route path='/'  element={<App/>}  />
+    </Routes>
+    
+    </BrowserRouter>
+  </React.StrictMode>
 );
