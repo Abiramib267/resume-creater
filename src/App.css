@@ -1,0 +1,360 @@
+*{
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+}
+.container {
+  min-height: 100vh;
+  background: #f9f9f9;
+  padding: 40px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: "Segoe UI", Arial, sans-serif;
+  --theme: blue;
+}
+
+.color-switcher {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.color-switcher button {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.color-switcher button:hover {
+  transform: scale(1.1);
+}
+
+.template-buttons {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 25px;
+}
+
+.template-buttons button {
+  padding: 6px 14px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background: white;
+  cursor: pointer;
+  font-size: 13px;
+  transition: all 0.3s;
+}
+
+.template-buttons button.active {
+  background: var(--theme);
+  color: white;
+  border-color: var(--theme);
+}
+
+.resume-card {
+  width: 100%;
+  max-width: 700px;
+  background: white;
+  padding: 25px 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  color: #333;
+  border-top: 6px solid var(--theme);
+}
+
+.resume-card h1 {
+  margin: 0;
+  font-size: 24px;
+  color: #222;
+}
+
+.resume-card .title {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 10px;
+}
+
+.resume-card hr {
+  border: none;
+  border-top: 1px solid #eee;
+  margin: 10px 0 15px;
+}
+
+.resume-card p {
+  font-size: 14px;
+  line-height: 1.5;
+  color: #555;
+}
+
+.skills {
+  margin-top: 15px;
+}
+
+.skills h3 {
+  color: var(--theme);
+  font-size: 15px;
+  margin-bottom: 6px;
+}
+
+.skill-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.skill-list span {
+  background: #f1f1f1;
+  padding: 6px 10px;
+  border-radius: 4px;
+  font-size: 12px;
+}
+
+
+.classic {
+  border-top: 6px solid var(--theme);
+  text-align: left;
+}
+
+
+.sidebar {
+  display: flex;
+  gap: 20px;
+  max-width: 750px;
+  border-top: none;
+  border-left: 8px solid var(--theme);
+}
+
+.sidebar .left {
+  width: 35%;
+  border-right: 2px solid var(--theme);
+  padding-right: 15px;
+}
+
+.sidebar .right {
+  width: 65%;
+  padding-left: 15px;
+}
+
+.modern {
+  border-left: 6px solid var(--theme);
+  border-top: none;
+  max-width: 700px;
+}
+
+.modern .header {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 10px;
+}
+
+.modern .avatar {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: var(--theme);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 20px;
+  letter-spacing: 1px;
+}
+
+.modern .summary {
+  margin: 10px 0;
+  color: #555;
+}
+
+.modern .skills h3 {
+  margin-top: 10px;
+}
+
+
+.experience,
+.education,
+.projects {
+  margin-top: 20px;
+}
+
+.experience h3,
+.education h3,
+.projects h3 {
+  color: var(--theme);
+  margin-bottom: 8px;
+  font-size: 15px;
+  border-bottom: 2px solid var(--theme);
+  display: inline-block;
+  padding-bottom: 2px;
+}
+
+.exp-item {
+  margin-bottom: 12px;
+}
+
+.exp-item strong {
+  color: #222;
+}
+
+.exp-item .exp-period {
+  font-size: 13px;
+  color: #888;
+  margin-bottom: 5px;
+}
+
+.exp-item ul {
+  margin: 4px 0 0 20px;
+  padding: 0;
+  list-style: disc;
+  color: #555;
+  font-size: 13px;
+}
+
+.education p {
+  font-size: 14px;
+  color: #444;
+}
+
+.projects div {
+  margin-bottom: 8px;
+}
+
+.projects strong {
+  color: #222;
+}
+
+.projects span {
+  display: block;
+  color: #555;
+  font-size: 13px;
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+    flex-direction: column;
+    border-left: none;
+    border-top: 6px solid var(--theme);
+  }
+
+  .sidebar .left {
+    width: 100%;
+    border-right: none;
+    padding-right: 0;
+  }
+
+  .sidebar .right {
+    width: 100%;
+    padding-left: 0;
+  }
+
+  .resume-card {
+    padding: 20px;
+  }
+}
+h2 {
+  text-align: center;
+} 
+.input-form {
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 30px;
+  background-color: #f9f9f9;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.input-form h2 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.input-form h3 {
+  margin-top: 30px;
+  color: #444;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 5px;
+}
+
+.input-form input,
+.input-form textarea {
+  width: 100%;
+  padding: 10px 12px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 16px;
+  box-sizing: border-box;
+}
+
+.input-form input:focus,
+.input-form textarea:focus {
+  border-color: #007bff;
+  outline: none;
+  background-color: #eef6ff;
+}
+
+.input-form textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+@media (max-width: 600px) {
+  .input-form {
+    padding: 20px;
+  }
+
+  .input-form h2 {
+    font-size: 22px;
+  }
+
+  .input-form input,
+  .input-form textarea {
+    font-size: 15px;
+  }
+}
+
+.main-layout {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 40px;
+  width: 100%;
+  padding: 20px 0;
+}
+
+.main-layout .input-form {
+  flex: 1;
+  max-width: 450px;
+  margin: 0; 
+}
+
+.preview-area {
+  flex: 1.5;
+  display: flex;
+  justify-content: center;
+}
+
+.preview-area .resume-card {
+  width: 100%;
+  max-width: 700px;
+}
+
+@media (max-width: 992px) {
+  .main-layout {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .main-layout .input-form,
+  .preview-area {
+    max-width: 100%;
+  }
+}
